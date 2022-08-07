@@ -35,10 +35,15 @@ try
     }
 catch
     {
-    Console.WriteLine("ты читать не умеешь? Последняя попытка");
-    double n = Convert.ToDouble(Console.ReadLine());
-    }
-finally
+    Console.WriteLine("ты читать не умеешь? Короче, введи ЦЕЛОЕ число не равное 0");
+    int n = Convert.ToInt32(Console.ReadLine());
+    if (n < 0)
     {
-        Console.Write("всё равно ты проиграл");
+        n = 0 - n;
+    }
+    for (int i = -n; i <= n; i++)
+        {
+            Console.Write(i);
+            Console.Write(" ");
+        }
     }
