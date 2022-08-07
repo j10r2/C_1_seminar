@@ -1,17 +1,44 @@
-﻿Console.WriteLine("введите число");
+﻿Console.WriteLine("введите число, отличное от 0");
 
 try
     {
     double n = Convert.ToDouble(Console.ReadLine());
+    if (n > 0)
+    {
+        n = n - n % 1;
+    }
+    else
+    {
+        n = n + -n % 1;
+    }
+    int m = Convert.ToInt32(n);
+    int i = 0 - m;
+    if (m > 0)
+    {
+        while (i < m + 1)
+        {
+            Console.Write(i);
+            Console.Write(" ");
+            i = i + 1;
+        }
+    }
+    else
+    {
+        i = 0 - i;
+        while (i < -m + 1)
+        {
+            Console.Write(i);
+            Console.Write(" ");
+            i = i + 1;
+        }
+    }
     }
 catch
     {
-    Console.WriteLine("ты читать не умеешь? Введи ЧИСЛО");
+    Console.WriteLine("ты читать не умеешь? Последняя попытка");
+    double n = Convert.ToDouble(Console.ReadLine());
     }
- int m = Convert.ToInt32(Math.Round(n, 0));
-    // int [] arr;
-    // arr = new int [(m * 2) + 1];
-    // arr[0] = 1;
-    // arr[1] = 2;
-    // arr[2] = 3;
-    Console.WriteLine(m);
+finally
+    {
+        Console.Write("всё равно ты проиграл");
+    }
