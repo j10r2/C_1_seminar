@@ -1,17 +1,40 @@
-﻿string 1 = "Понедельник";
-string 2 = "Вторник";
-string 3 = "Среда";
-string 4 = "Четверг";
-string 5 = "Пятница";
-string 6 = "Суббота";
-string 7 = "Воскресенье";
-Console.WriteLine("Введите число от 1 до 7");
-string day = Console.ReadLine();
-try
+﻿Console.WriteLine("Введите число от 1 до 7");
+int day = Convert.ToInt32(Console.ReadLine());
+switch (day)
 {
-    Console.WriteLine(day);
-}
-catch (ArgumentException ex)
-{
-    Console.WriteLine("Ну и чё ты ввёл???");
+    case 1:
+    {
+    Console.WriteLine("Понедельник");
+    break;
+    }
+    case 2:
+    {
+    Console.WriteLine("Вторник");
+    break;
+    }
+    case 3:
+    {
+    Console.WriteLine("Среда");
+    break;
+    }
+    case 4:
+    {
+    Console.WriteLine("Четверг");
+    break;
+    }
+    case 5:
+    {
+    Console.WriteLine("Пятница");
+    break;
+    }
+    case 6:
+    {
+    Console.WriteLine("Суббота");
+    break;
+    }
+    case 7:
+    {
+    Console.WriteLine("Воскресенье");
+    break;
+    }
 }
