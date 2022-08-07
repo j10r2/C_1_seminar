@@ -17,13 +17,13 @@ if (size > 10)
         Console.WriteLine("Короче, сравниваем 10.");
     }
 }
-int [] arr;
-arr = new int [size];
-int max = 0;
+double [] arr;
+arr = new double [size];
+double max = 0;
 for (int i = 0; i < size; i++)
 {
     Console.WriteLine("введите " + (i+1) + "-е число");
-    arr [i] = int.Parse(Console.ReadLine());
+    arr [i] = double.Parse(Console.ReadLine());
     if (arr[i] > max)
     {
         max = arr [i];
